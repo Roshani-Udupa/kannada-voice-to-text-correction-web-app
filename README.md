@@ -169,8 +169,9 @@ kannada_hackathon/
 │   ├── sttService.js      # Speech-to-Text service
 │   ├── confusionDetector.js # Confusion detection logic
 │   └── exportService.js   # TXT export
-├── speech_conversion_to_text    # txt outputs for the sample inputs.
+├── text_outputs/    # txt outputs for the sample inputs.
 ├── package.json
+├── kannada-speech-to-text-conversion.pdf  # ppt describing the problem statement and tech stack used.
 └── README.md
 ```
 
@@ -257,7 +258,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Notes
 
-The samples and results are in `recordings/` and `speech_conversion_to_text/` folders respectively.
+The samples and results are in `recordings/` and `text_outputs/` folders respectively.
 
 ---
 

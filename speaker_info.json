@@ -1,0 +1,14 @@
+{
+"team_name": "KannadaaHackerz",
+"student_name": "Roshani T S Udupa",
+"age": 20,
+"gender": "Female",
+"native_kannada_speaker": true,
+"home_region": "Udupi",
+"dialect_used": "Bangalore Kannada",
+"is_dialect_recording_included": true,
+"recording_device": "Samsung Galaxy M31 (phone)",
+"recording_environment": "Quiet room at home",
+"speech_to_text_tool_used": "ElevenLabs API-scribe_v2 model",
+"date_of_recording": "2022-11-20"
+}
