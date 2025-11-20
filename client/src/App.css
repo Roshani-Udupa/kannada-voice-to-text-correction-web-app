@@ -1,0 +1,180 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--bc);
+}
+
+.app-header {
+  background: linear-gradient(135deg, rgba(224, 251, 255, 0.95), rgba(200, 244, 255, 0.9));
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.app-header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--p);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: rgba(15, 23, 42, 0.75);
+  font-size: 1.1rem;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2.5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid rgba(14, 165, 233, 0.12);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.section h2 {
+  color: #0284c7;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.difficulty-selector {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.difficulty-selector label {
+  font-weight: 600;
+  color: var(--bc);
+}
+
+.difficulty-selector select {
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.15);
+}
+
+.difficulty-selector select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.audio-info {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(240, 253, 255, 0.95);
+  border-radius: 12px;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.audio-info p {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.error-message {
+  background: rgba(255, 247, 237, 0.95);
+  color: #c2410c;
+  padding: 1.1rem 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(249, 115, 22, 0.35);
+}
+
+.app-btn {
+  padding: 0.9rem 1.65rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--pc);
+  background: linear-gradient(120deg, var(--p) 0%, var(--s) 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-width: 200px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.app-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.app-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.app-btn-primary {
+  background: linear-gradient(120deg, var(--p) 0%, var(--a) 100%);
+}
+
+.app-btn-secondary {
+  background: linear-gradient(120deg, var(--s) 0%, var(--p) 100%);
+  color: var(--pc);
+}
+
+.app-footer {
+  background: rgba(15, 23, 42, 0.85);
+  padding: 1.75rem 1rem;
+  text-align: center;
+  color: rgba(248, 253, 255, 0.9);
+  margin-top: auto;
+  border-top: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .audio-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-btn {
+    width: 100%;
+  }
+}
+

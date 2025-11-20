@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(102, 26, 230, 0.7), rgba(31, 178, 166, 0.3)), linear-gradient(135deg, var(--p), var(--s));
+  color: var(--bc);
+}
+
+.kannada-text {
+  font-family: 'Noto Sans Kannada', 'Space Grotesk', sans-serif;
+  font-size: 1.15em;
+  line-height: 1.8;
+}
+
