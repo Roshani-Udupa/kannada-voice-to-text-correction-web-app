@@ -1,30 +1,39 @@
-# Kannada Voice-to-Text Correction Web Application - Problem Statement 1
+# PROBLEM STATEMENT 1: Kannada Voice-to-Text Correction Challenge
 
 A web application that records or uploads Kannada audio, converts it to text using Speech-to-Text APIs, highlights confusing/misrecognized Kannada characters (including ottaksharas), and lets users correct them interactively. The final output can be exported as TXT containing both model-generated and user-corrected text.
 
+## Team Details
+
+### Team Name - KannadaHackerz
+
+### Team Members
+
+- **1MS23CS152**: Risshab Srinivas Ramesh
+- **1MS23CS155**: Roshani T S Udupa
+
 ## Features
 
-### 🎤 Audio Input
+### Audio Input
 
 - **Option A**: Upload pre-recorded audio files (MP3/WAV/WebM)
 - **Option B**: Live audio recording using browser microphone
 - Support for easy, medium, and hard paragraph difficulty levels
 
-### 🗣️ Speech-to-Text
+### Speech-to-Text
 
 - Converts audio to Kannada text using ElevenLabs API SDK
 - Uses `scribe_v1` or `scribe_v2` model (configurable)
 - Highlights only low confidence words (< 80% confidence) for user correction
 - Stores raw model-generated output with word-level confidence scores
 
-### 🔍 Low Confidence Detection
+### Low Confidence Detection
 
 - Automatically detects words with low confidence scores (< 80%)
 - Only highlights words that need user attention
 - Provides confidence percentage for each low confidence word
 - Navigation button to jump to next low confidence word
 
-### ✏️ Interactive Correction UI
+### Interactive Correction UI
 
 - Clean text editor for transcription display
 - Click on low confidence words to see details
@@ -33,7 +42,7 @@ A web application that records or uploads Kannada audio, converts it to text usi
 - Real-time text editing capability
 - Navigate between low confidence words easily
 
-### 📄 Export Functionality
+### Export Functionality
 
 - Download as TXT
 - Export file contains:
@@ -51,8 +60,8 @@ A web application that records or uploads Kannada audio, converts it to text usi
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
-   cd kannada_hackathon
+   git clone https://github.com/Roshani-Udupa/kannada-voice-to-text-correction-web-app.git
+   cd kannada-voice-to-text-correction-web-app/
    ```
 
 2. **Install dependencies**
@@ -154,12 +163,13 @@ kannada_hackathon/
 │   │   ├── App.js
 │   │   └── index.js
 │   └── package.json
-├── server/                 # Node.js backend
+├── recordings/            # voice recordings (samples)
+├── server/                # Node.js backend
 │   ├── index.js           # Express server
 │   ├── sttService.js      # Speech-to-Text service
 │   ├── confusionDetector.js # Confusion detection logic
 │   └── exportService.js   # TXT export
-├── uploads/               # Temporary audio uploads (gitignored)
+├── speech_conversion_to_text    # txt outputs for the sample inputs.
 ├── package.json
 └── README.md
 ```
@@ -201,8 +211,6 @@ Export transcription as TXT.
   "format": "txt"
 }
 ```
-
-**Response:** File download
 
 ## Confusion Detection
 
@@ -247,13 +255,9 @@ The application detects:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+## Notes
 
-MIT License
-
-## Support
-
-For issues and questions, please open an issue on the repository.
+The samples and results are in `recordings/` and `speech_conversion_to_text/` folders respectively.
 
 ---
 
