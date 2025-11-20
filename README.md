@@ -1,6 +1,6 @@
 # Kannada Voice-to-Text Correction Web Application - Problem Statement 1
 
-A web application that records or uploads Kannada audio, converts it to text using Speech-to-Text APIs, highlights confusing/misrecognized Kannada characters (including ottaksharas), and lets users correct them interactively. The final output can be exported as PDF or TXT containing both model-generated and user-corrected text.
+A web application that records or uploads Kannada audio, converts it to text using Speech-to-Text APIs, highlights confusing/misrecognized Kannada characters (including ottaksharas), and lets users correct them interactively. The final output can be exported as TXT containing both model-generated and user-corrected text.
 
 ## Features
 
@@ -35,7 +35,7 @@ A web application that records or uploads Kannada audio, converts it to text usi
 
 ### 📄 Export Functionality
 
-- Download as PDF or TXT
+- Download as TXT
 - Export file contains:
   - Section 1: Model Generated Text
   - Section 2: User Corrected Text
@@ -136,7 +136,7 @@ The application will be available at:
    - Click "Start Recording" to record live audio
 3. **Transcribe**: Click "Transcribe Audio" to convert speech to text
 4. **Correct**: Click on highlighted yellow text to see correction options
-5. **Export**: Download the final transcription as PDF or TXT
+5. **Export**: Download the final transcription as TXT
 
 ## Project Structure
 
@@ -158,7 +158,7 @@ kannada_hackathon/
 │   ├── index.js           # Express server
 │   ├── sttService.js      # Speech-to-Text service
 │   ├── confusionDetector.js # Confusion detection logic
-│   └── exportService.js   # PDF/TXT export
+│   └── exportService.js   # TXT export
 ├── uploads/               # Temporary audio uploads (gitignored)
 ├── package.json
 └── README.md
@@ -190,7 +190,7 @@ Transcribe audio file to Kannada text.
 
 ### POST `/api/export`
 
-Export transcription as PDF or TXT.
+Export transcription as TXT.
 
 **Request:**
 
@@ -198,7 +198,7 @@ Export transcription as PDF or TXT.
 {
   "modelText": "original text",
   "correctedText": "corrected text",
-  "format": "pdf" | "txt"
+  "format": "txt"
 }
 ```
 
@@ -217,7 +217,6 @@ The application detects:
 - **Frontend**: React, CSS3, Axios
 - **Backend**: Node.js, Express
 - **STT**: ElevenLabs API SDK (@elevenlabs/elevenlabs-js)
-- **PDF Generation**: PDFKit
 - **Audio Recording**: MediaRecorder API
 - **Kannada Input**: Custom virtual keyboard component
 
